@@ -1,0 +1,43 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title_service
+        field:
+          input_type: text
+          antlers: false
+          display: 'Title Service'
+          type: text
+          icon: text
+          instructions: 'This is title for service'
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: small_description
+        field:
+          input_type: text
+          antlers: false
+          display: 'Small Description'
+          type: text
+          icon: text
+          instructions: 'this is a small description for service'
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: image_service
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          max_files: 1
+          display: 'Image Service'
+          type: assets
+          icon: assets
+          instructions: 'Image icon for service'
+          listable: hidden
+          instructions_position: above
+          read_only: false

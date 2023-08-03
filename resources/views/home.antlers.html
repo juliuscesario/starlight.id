@@ -1,0 +1,96 @@
+<div class="kv">
+    <div class="bubble">
+        <div style="position: relative;height: 100%;">
+            <h1 class="header-1">We believe in</h1>
+            <h1 class="header-2">Brand Experiential</h1>
+            <p class="content">
+                In this Digital Era, <strong>Customer Experience</strong> is the new <br/> way to win people’s hearts.<br> 
+                We deliver the solutions to integrate your <strong>Brand Campaign</strong> and deliver an extraordinary <strong>Experience</strong>. 
+            </p>
+            <a href="https://vr.starlight.id" target="_blank">
+                Click <strong>here</strong> to start <span style="color: #FDC50B;">the experience</span> 
+            </a>
+        </div>
+    </div>
+    <a href="#updated"><img src="./assets/img/vector.svg" alt="" class="vector"></a>
+</div>
+<div id="updated">
+    <h1 class="font-primary text-center">UPDATED PROJECTS</h1>
+    <div class="galery owl-carousel">
+        {{ nav:updated}}
+        <a href="{{url}}">
+            <div>
+                <img src="{{ new_update_image }}" alt="">
+                <p>{{ new_update_title }}</p>
+            </div>
+        </a>
+        {{ /nav:updated}}
+    </div>
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+<div id="about-us">
+    <div>
+        <h1 class="font-primary">About Us</h1>
+        <p class="subtitle-black">
+            Founded on September 9th, 2009, Starlight is becoming a trusted and experienced agency for you to have an extraordinary event experience.
+        </p>
+    </div>
+    <div style="grid-row: span 2;">
+        <div class="video">
+            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/19v1RLZN0U8?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <p class="content">In 2021 , We won the SWA – MIX Magazine award as THE MOST CREATIVE BRAND COMMUNICATION : Brand Activation Category & Integrated Campaign Category </p>
+    <a href="about">Learn More <i class="fa fa-chevron-right"></i></a>
+</div>
+<div id="our-service">
+    <div class="text-center font-primary">OUR SERVICES</div>
+    <div class="text-center w-500 description">
+        Through <span style="color: #2E30FF;">creativity</span> & <span style="color: #2E30FF;"">technology</span>, we integrate your brand experience campaigns to create engagement with the community.
+    </div>
+    <div class="grid">
+        <div>
+            <img src="./assets/img/carbon_events.png" alt="" class="text-center">
+            <p class="text-center w-500">Content Development</p>
+            <p class="text-center">Create  unique ideas and  develop a strategies to produce great content on multiple platforms.</p>
+        </div>
+        <div>
+            <img src="./assets/img/carbon_events_2.png" alt="" class="text-center">
+            <p class="text-center w-500">Multimedia Production</p>
+            <p class="text-center">Produce audio and video (including motion graphics) that visualize the ideas for enhancing experiences.</p>
+        </div>
+        <div>
+            <img src="./assets/img/carbon_events_3.png" alt="" class="text-center">
+            <p class="text-center w-500">Live Streaming Studio</p>
+            <p class="text-center">Broadcast the content and events across multiple online platforms supported by a complete set of studio and streaming systems.</p>
+        </div>
+        <div>
+            <img src="./assets/img/carbon_events_4.png" alt="" class="text-center">
+            <p class="text-center w-500">Customer Experience</p>
+            <p class="text-center">Deliver a whole concept of event management to generate interaction with the consumer and increase the value of the experience.</p>
+        </div>
+        <div>
+            <img src="./assets/img/carbon_events_5.png" alt="">
+            <p class="text-center w-500">Social Media & Community Engagement</p>
+            <p class="text-center">Spread the message through social media and community engagement.</p>
+        </div>
+    </div>
+</div>
+<div id="latest-work">
+    <div class="text-center font-primary">LATEST WORK</div>
+    <div class="grid">
+        {{ nav:latest_work}}
+            {{if first_data == true }}
+                <div class="box" onclick="window.open('{{url}}')">
+            {{else}}
+                <div class="box sm-none" onclick="window.open('{{url}}')">
+            {{/if}}
+                    <img src="{{image_latest_work}}" alt="">
+                    <div class="header">{{title_latest_work}}</div>
+                    
+                </div>
+        {{ /nav:latest_work}}
+    </div>
+    <a href="https://www.youtube.com/channel/UCXkz-q0dMjXFnFRxFdndY_Q" target="_blank">Learn More <i class="fa fa-chevron-right"></i></a>
+</div>

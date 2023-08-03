@@ -1,0 +1,47 @@
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title_latest_work
+        field:
+          input_type: text
+          antlers: false
+          display: 'Title Latest Work'
+          type: text
+          icon: text
+          listable: hidden
+          instructions_position: above
+          read_only: false
+      -
+        handle: image_latest_work
+        field:
+          mode: list
+          restrict: true
+          allow_uploads: true
+          show_filename: true
+          display: 'Image Latest Work'
+          type: assets
+          icon: assets
+          listable: hidden
+          instructions_position: above
+          read_only: false
+          max_files: 1
+      -
+        handle: first_data
+        field:
+          options:
+            'True': null
+            'False': null
+          multiple: false
+          clearable: false
+          searchable: true
+          taggable: false
+          push_tags: false
+          cast_booleans: true
+          display: 'First Data'
+          type: select
+          icon: select
+          listable: hidden
+          instructions_position: above
+          read_only: false

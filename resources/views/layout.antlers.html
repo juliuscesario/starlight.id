@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <title>{{ title ?? site:name }}</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./assets/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <body>
+        <header>
+            <nav class="navbar">
+                <a class="brand" href="/"></a>
+                <div class="navbar-menu">
+                    <ul class="sm-none">
+                        {{ nav:header_nav}}
+                        <li>
+                            <a href="{{ url }}" class="{{if is_current }}current{{/if}} navbar-menu-item">{{ title }}</a>
+                        </li>
+                        {{ /nav:header_nav}}
+                    </ul>
+                    <div class="md-none" style="margin: 20px 15px;">
+                        <span class="fa fa-3x fa-bars" style="color: white;" id="menu-toggle"></span>
+                    </div>
+                </div>
+            </nav>
+            <div class="mobile-menu" style="display: none;" id="mobile-menu">
+                <div style="text-align: right; color: #fff;">
+                    <p class="menu-close">Close <span class="fa fa-chevron-right"></span></p>
+                    {{ nav:header_nav}}
+                    <p>
+                        <a href="{{ url }}" class="{{if is_current }}current{{/if}} navbar-menu-item">{{ title }}</a>
+                    </p>
+                    {{ /nav:header_nav}}
+                </div>
+            
+            </div>
+        </header>
+        {{template_content}}
+        <footer id="contact">
+            <div class="grid">
+                <div class="sm-none">
+                    <img src="./assets/img/logo.png" alt="" style="display: block; margin: 0 auto;">
+                </div>
+                <div class="md-none">
+                    <div style="display: grid; grid-template-columns: 40% 50%; gap: 20px;">
+                        <div>
+                            <img src="./assets/img/logo.png" alt="" width="100%">
+                        </div>
+                        <div>
+                            <h4>FOLLOW US</h4>
+                            <span class="fa fa-2x fa-instagram"></span>
+                            <span class="fa fa-2x fa-youtube-play"></span>
+                            <span class="fa fa-2x fa-linkedin-square"></span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h4>PT TALENTA GROUP</h4>
+                    <p><a href="https://goo.gl/maps/rKGnh6hNiLczbRVr9" target="_blank" style="text-decoration: none; color: #fff;">Kirana Boutique Office E1/6</a></p>
+                    <p><a href="https://goo.gl/maps/rKGnh6hNiLczbRVr9" target="_blank" style="text-decoration: none; color: #fff;">Jl. Boulevard Raya, Kelapa Gading</a></p> 
+                    <p><a href="https://goo.gl/maps/rKGnh6hNiLczbRVr9" target="_blank" style="text-decoration: none; color: #fff;">Jakarta 14240 - Indonesia</a></p>
+                </div>
+                <div>
+                    <h4>CONTACT US</h4>
+                    <p><a href="tel:+6281249207670" target="_blank" style="text-decoration: none; color: #fff;"><span class="fa fa-phone"></span>&nbsp;081249207670</a></p>
+                    <p><a href="https://wa.me/6281249207670?text=Halo ingin tahu tentang starlight" target="_blank" style="text-decoration: none; color: #fff;"><span class="fa fa-whatsapp"></span>&nbsp;081249207670</a></p>
+                    <p><a href="mailto:account@talentagroup.net" target="_blank" style="text-decoration: none; color: #fff;"><span class="fa fa-envelope-o"></span>&nbsp;account@talentagroup.net</a></p>
+                </div>
+                <div class="sm-none">
+                    <h4>FOLLOW US</h4>
+                    <p><a href="https://www.instagram.com/starlight.experiential/" target="_blank" style="text-decoration: none; color: #fff;"><span class="fa fa-instagram"></span>@starlight.experiential</a></p>
+                    <p><a href="https://www.youtube.com/channel/UCXkz-q0dMjXFnFRxFdndY_Q" target="_blank" style="text-decoration: none; color: #fff;"></span><span class="fa fa-youtube-play"></span>Starlight Experiential</a></p>
+                    <p><a href="https://www.linkedin.com/company/starlight-id/" target="_blank" style="text-decoration: none; color: #fff;"></span><span class="fa fa-linkedin-square"></span>starlight.experiential</a></p>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script type="text/javascript">
+       $(document).ready(function(){
+            const owl = $(".owl-carousel");
+            owl.owlCarousel({
+                    loop:true,
+                    center: true,
+                    items: 3,
+                    margin: 30,
+                    nav:false,
+                    responsive:{
+                        0: {
+                            items: 1,
+                        },
+                        1024:{
+                            items:3
+                        },
+                    }
+            });
+
+            $("#updated .left").click(function(){
+                owl.trigger("prev.owl.carousel")
+            })
+            $("#updated .right").click(function(){
+                owl.trigger("next.owl.carousel")
+            })
+
+            $("#menu-toggle").click(function(){
+                $("#mobile-menu").show();
+            })
+            $(".menu-close").click(function(){
+                $("#mobile-menu").hide();
+            })
+        });
+    </script>
+</html>
